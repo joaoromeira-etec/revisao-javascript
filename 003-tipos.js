@@ -19,7 +19,7 @@ let mortesPorTerremoto = null;
 // Date
 const fundacaoCidade = new Date('1929-10-12');
 const dataCorreta = new Date(1929, 10, 12);
-// console.log(fundacaoCidade); Saída 1929-10-12
+// console.log(fundacaoCidad3e); Saída 1929-10-12
 
 // Objeto
 let enderecoPrefeirutra = {
@@ -45,3 +45,8 @@ function ExibeDados() {
 }
 
 ExibeDados();
+
+console.log('');
+console.log('Tipo da Variável: enderecoPrefeirutra');
+console.log(typeof(enderecoPrefeirutra)); //Entender o tipo da
+console.log(Array.isArray(enderecoPrefeirutra));
