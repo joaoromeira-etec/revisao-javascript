@@ -1,0 +1,18 @@
+let entrada = require('prompt-sync')();
+
+let nome = entrada('Digite seu nome: ');
+let idade = entrada('Digite sua idade: ');
+
+let validaIdade = isNaN(idade);
+
+if(validaIdade) {
+    console.log(`${nome}, insira um valor número na idade!`);
+} else{
+    if (idade > 18) {
+        console.log('Bem-Vindo ao Site!')
+    }
+
+    if (idade < 18) {
+        console.log('Você não tem idade para acessar o site.')
+    }
+}
