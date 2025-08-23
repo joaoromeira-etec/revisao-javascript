@@ -16,3 +16,8 @@ if(validaIdade) {
         console.log('Você não tem idade para acessar o site.')
     }
 }
+
+if(nome.lenght<5){console.log('Seu nome é muito curto.')};
+
+const maioridade = idade >=18 ? 'Maior' : 'Menor'; //ternário
+console.log(`${nome}, descobri que você é de ${maioridade}`);
