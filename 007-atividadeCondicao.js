@@ -27,14 +27,18 @@ console.log(' ')
 
  }
 
-// if(amigo === "sim") {
-//     if (idade >=18 ){
-//         console.log(`Parabéns, ${nome}, sua entrada tá permitida e ainda ganhou uma bebida daora!`)
-//     } else{
+if(amigo === "sim") {
+    if (idade >=18 ){
+        console.log(`Parabéns, ${nome}, sua entrada tá permitida e ainda ganhou uma bebida daora!`)
+    } else {
+         console.log(`Então, ${nome}, cê pode entrar, mas, só porque é amigo do dono`)
+    }
+}
 
-//     }
-// }
-
-// if(amigo === "não") {
-    
-// }
+if(amigo === "não") {
+    if (idade >=18 ){
+        console.log(`Olá, ${nome}, você pode entrar.`)
+    } else {
+         console.log(`Você NÃO pode entrar, ${nome}. Não sobrou nada pro beta :( `)
+    }
+}
