@@ -10,22 +10,27 @@ console.log(' ')
 let nUm = entrada('Digite o primeiro número: ');
 let nDois = entrada('Digite o segundo número: ');
 console.log(' ')
-let contagem = 0;
+let contagens = 0;
 
 let n1 = parseInt(nUm);
 let n2 = parseInt(nDois);
 
 
 
- // Erros
+ // Erros de Validação
+  if (nUm === '' || nDois === '') {
+    console.log(' - É necessário preencher todas as informações solicitadas!')
+ } else if (isNaN(nUm) || isNaN(nDois)) {
+    console.log(' - As duas entradas não são números!')  
+ }
+
+
+
  if (isNaN(n1)) {
     console.log(' - O primeiro valor deve ser um número.');
 
  }
 
- if (nUm.trim() === '' || nDois.trim() === '') {
-    console.log(' - É necessário preencher todas as informações solicitadas!')
- }
 
   if (isNaN(n2)) {
     console.log(' - O segundo valor deve ser um número');
@@ -35,12 +40,22 @@ let n2 = parseInt(nDois);
 
 
 
- // Erros de Validação!
+ // Lógica do Programa
  if (erros.length > 0) {
     console.log('Erros encontrados no programa: ');
     erros.forEach(erro => console.log('- ' + erro))
- } else {
+ } else if (n1 < n2) {
+
     console.log('Contagem: ')
+    while (n1 <= n2) {
+      console.log(n1);
+      n1++;
+
+    }
+
  }
+
+ console.log('')
+ console.log('Pressione Enter para encerrar o programa!')
 
 
