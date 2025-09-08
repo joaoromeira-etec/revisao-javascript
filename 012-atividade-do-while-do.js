@@ -9,26 +9,29 @@
 */
 
 let entrada = require('prompt-sync')();
+const senhaCorreta = 'penislargo';
 let tentativas = 0;
-
-const senha = 'penislargo';
+let senhaDigitada;
 let acesso = false;
 
-let senhaDigitada;
-
 do {
-    
+    senhaDigitada = entrada('Digite a senha para acessar o sistema de Login: ');
 
-    if (senhaDigitada === senha) {
+    if (senhaDigitada === senhaCorreta) {
         acesso = true;
-        console.log('Senha confirmada, Bem-Vindo ao sistema de login!');
-        break;
-    };
+        console.log('Bem vindo ao sistema de login!');
+    } else {
+        tentativas++;
+        if (tentativas < 3) {
+            console.log(' ');
+            console.log(`Senha incorreta. Tentativa ${tentativas} de 3.`);
+            console.log(' ');
+        }
+    }
 
+} while (!acesso && tentativas < 3);
 
-senhaDigitada = entrada('Digite a senha para acessar o sistema de Login: ');
-    tentativas++;
-} while ( tentativas <= 3);
-
-
+if (!acesso) {
+    console.log('Usuário bloqueado. Número máximo de tentativas excedido.');
+}
 

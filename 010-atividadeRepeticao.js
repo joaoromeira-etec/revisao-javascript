@@ -50,9 +50,20 @@ let n2 = parseInt(nDois);
     while (n1 <= n2) {
       console.log(n1);
       n1++;
-
+      contagens
     }
 
+ } else if (n1 > n2) {
+
+   while (n1 >= n2) {
+      console.log(n1);
+      n1--;
+      contagens++;
+   }
+ } else { 
+   
+   console.log(n1) 
+   repeticoes = 1;
  }
 
  console.log('')
